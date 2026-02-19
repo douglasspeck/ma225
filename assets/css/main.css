@@ -1,0 +1,200 @@
+:root {
+    --red-darker: #990000;
+    --red-dark: #cc0000;
+    --red: #ff0000;
+    --red-light: #ff6666;
+    --red-lighter: #ffcccc;
+
+    --main-color: #101010;
+    --base-color: #ebece8;
+
+    --highlight-color: var(--red);
+    --aux-color-1: var(--red-darker);
+    --aux-color-2: var(--red-light);
+
+    --page-bg: var(--base-color);
+
+    --main-font: 'Josefin Sans', serif;
+    --aux-font: 'Yeseva One', sans-serif;
+
+    --sec-width: 70%;
+    --sec-margin: calc(50% - 0.5 * var(--sec-width));
+}
+
+*, ::before, ::after {
+    font-family: inherit;
+    color: inherit;
+    font-weight: inherit;
+    transition: inherit;
+    cursor: inherit;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+html,body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--page-bg);
+    font-size: 18px;
+    position: absolute;
+    z-index: -100;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-weight: 200;
+    transition: all 0.1s linear;
+    cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+}
+
+#title, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--aux-font);
+}
+
+p {
+    line-height: 1.25;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+em {
+    font-style: normal;
+    background-color: var(--highlight-color);
+    color: var(--base-color);
+    padding: 0 .5ch;
+}
+
+[lang="en"] {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a[href ^="https://"]::after {
+    content: url('/~sepromat/assets/img/linkExt/green-1.svg');
+    padding-left: 0.5ch;
+}
+
+main a:not(.clean) {
+    color: var(--red);
+    font-weight: bolder;
+    background: linear-gradient(var(--red), var(--red));
+    background-repeat: no-repeat;
+    transition: all .1s linear;
+    background-size: calc(100% - 2ch) 2px;
+    background-position: 1ch 100%;
+}
+
+a:not(.clean):hover {
+    background-size: 100% 2px;
+    background-position: 0 100%;
+}
+
+a.button {
+    width: fit-content;
+    background: none;
+    color: var(--base-color);
+    background-color: var(--highlight-color);
+    padding: 0.25em 0.5em;
+    margin: 0.5em auto 0;
+    font-family: var(--aux-font);
+    font-weight: bold;
+    border-radius: 0.25em;
+}
+
+a.button.inactive {
+    pointer-events: none;
+}
+
+main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 10vh;
+    min-height: 30vh;
+}
+
+main img {
+    content-visibility: auto;
+}
+
+main > section {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ol,ul,li {
+    padding: 0;
+    margin: 0.5em 0;
+}
+
+li::marker {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-bottom: 1px solid var(--aux-color-2);
+    width: 70%;
+    margin: 0.25em auto;
+}
+
+@media screen and (orientation: landscape) {
+
+    html, body {
+        font-size: 24px;
+    }
+
+    main > section {
+        width: var(--sec-width);
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+
+    .no-mobile {
+        display: none;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-width: 1200px) {
+    html,body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1025px) {
+    html,body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    html,body {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,118 @@
+main h1 {
+    font-size: 1.5em;
+    padding-bottom: 0.25em;
+}
+
+main h2 {
+    font-size: 1.25em;
+    color: var(--aux-color-2);
+}
+
+.two-cols {
+    display: grid;
+}
+
+.formula {
+    width: 80%;
+    margin: 0 auto 5%;
+    border: 1px solid black;
+    padding: 1em;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+.mult::after {
+    content: '⋅';
+    padding: 0 0.5ch;
+}
+
+.formula .equation {
+    display: flex;
+    gap: 0.5ch;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--aux-font);
+}
+
+.formula .equation > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formula .equation::after {
+    content: "=";
+    display: block;
+}
+
+.formula .equation .left-part { order: 1; }
+.formula .equation::after { order: 2; }
+.formula .equation .right-part { order: 3; }
+
+.formula .fraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formula .fraction .numerator {
+    padding: 0 0.5ch;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 0.25ch;
+}
+
+.comp-list > ol {
+    display: flex;
+    flex-direction: column;
+}
+
+.comp-list .component {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.comp-list .component span {
+    font-family: var(--aux-font);
+    transition: all 0.1s ease-in-out;
+    display: inline-block;
+}
+
+.comp-list h3 {
+    margin: 0;
+    font-family: var(--main-font);
+    font-weight: 600;
+}
+
+.component:hover span,
+#task-grade .formula-task-comp:hover {
+    color: var(--highlight-color);
+}
+
+body:has(#T1:hover) #gT1, body:has(#gT1:hover) #T1 span,
+body:has(#T2:hover) #gT2, body:has(#gT2:hover) #T2 span,
+body:has(#T3:hover) #gT3, body:has(#gT3:hover) #T3 span,
+body:has(#T4:hover) #gT4, body:has(#gT4:hover) #T4 span,
+body:has(#T5:hover) #gT5, body:has(#gT5:hover) #T5 span
+{color: var(--highlight-color); }
+
+body:has(#tcA:hover) #task-comp-A span, body:has(#task-comp-A:hover) #tcA,
+body:has(#tcR:hover) #task-comp-R span, body:has(#task-comp-R:hover) #tcR,
+body:has(#tcG:hover) #task-comp-G span, body:has(#task-comp-G:hover) #tcG
+{color: var(--highlight-color); }
+
+@media screen and (orientation: landscape) {
+
+    .two-cols {
+        gap: 5%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .formula {
+        font-size: 1em;
+    }
+
+}
