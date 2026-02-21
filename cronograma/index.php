@@ -1,3 +1,79 @@
+<?php
+
+    include_once('../assets/php/parse_data.php');
+
+    function render_assessments($assessments) {
+
+        $today = new DateTime('today');
+
+        $rows = 1;
+        foreach ($assessments as $a) {
+            $schedule = $a['schedule'] ?? [];
+            $dates = [];
+            foreach ($schedule as $s) {
+                if (in_array($s['date'], $dates)) { continue; }
+                array_push($dates, $s['date']);
+            }
+            $rows = max($rows, count($dates));
+        }
+        $rows += 1;
+
+        echo '<section id="assessments" style="--rows:'.$rows.'">';
+        echo '<h2 class="hidden">Trabalhos</h2>';
+    
+        foreach ($assessments as $index => $assessment) {
+    
+            if (empty($assessment['id']) || empty($assessment['title'])) {
+                continue;
+            }
+    
+            $id = $assessment['id'];
+            $title = $assessment['title'];
+            $schedule = $assessment['schedule'] ?? [];
+    
+            echo '<section id="' . e($id) . '" class="assessment">';
+            echo '<h3>Trabalho ' . ($index + 1) . ': ' . e($title) . '</h3>';
+    
+            if (!empty($schedule)) {
+    
+                // Ordena por data
+                usort($schedule, fn($a, $b) => strcmp($a['date'], $b['date']));
+    
+                // Agrupa por data
+                $grouped = [];
+                foreach ($schedule as $item) {
+                    if (empty($item['date']) || empty($item['title'])) continue;
+                    $grouped[$item['date']][] = $item['title'];
+                }
+    
+                echo '<ul>';
+    
+                foreach ($grouped as $date => $events) {
+                    $eventDate = new DateTime($date);
+
+                    $class = ($eventDate < $today) ? ' class="check"' : '';
+
+                    echo "<li{$class}>";
+                    echo '<span class="date">' . format_date_br($date) . '</span>';
+
+                    foreach ($events as $eventTitle) {
+                        echo '<p>' . e($eventTitle) . '</p>';
+                    }
+
+                    echo '</li>';
+                }
+    
+                echo '</ul>';
+            }
+    
+            echo '</section>';
+        }
+    
+        echo '</section>';
+
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -16,10 +92,15 @@
     </head>
     <body>
         <?php include('../assets/php/header.php'); ?>
-        <main>
+        <main id="schedule">
             <section>
                 <h1>Cronograma</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ratione tenetur porro deleniti, harum unde minima quos molestiae hic nemo? Vel minus, est dolor exercitationem accusantium facilis molestias laborum temporibus expedita necessitatibus laudantium? Ex odio repudiandae eveniet. Ullam consectetur inventore nostrum quos. Repellendus veniam nesciunt deserunt repellat doloribus id quis nulla mollitia vitae, modi et blanditiis est recusandae ex? Nesciunt architecto eos nisi nam maiores ratione illum, voluptatem vel quis nihil. Voluptates repellat accusantium dolorum sint mollitia incidunt facere aliquid quisquam maxime! Harum iure hic qui aliquam sequi ipsum ex blanditiis magnam facilis! Odio alias mollitia ullam rem, similique sit.</p>
+                <p>A disciplina é fundamentalmente prática, com as aulas voltadas majoritariamente para o desenvolvimento das tarefas avaliativas.</p>
+                <?php render_assessments(oferta('current.assessments', [])) ?>
+                <p>Além dos encontros para elaboração dos projetos, a disciplina contará com momentos de explicação sobre os mesmos, além de exposições teóricas e outros pontos de contato institucionais. Confira o calendário completo abaixo:</p>
+                <section id="calendar">
+                    <h2 class="hidden">Calendário</h2>
+                </section>
             </section>
         </main>
         <?php include('../assets/php/footer.php'); ?>

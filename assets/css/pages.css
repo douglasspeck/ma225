@@ -93,17 +93,110 @@ main h2 {
     color: var(--highlight-color);
 }
 
-body:has(#T1:hover) #gT1, body:has(#gT1:hover) #T1 span,
-body:has(#T2:hover) #gT2, body:has(#gT2:hover) #T2 span,
-body:has(#T3:hover) #gT3, body:has(#gT3:hover) #T3 span,
-body:has(#T4:hover) #gT4, body:has(#gT4:hover) #T4 span,
-body:has(#T5:hover) #gT5, body:has(#gT5:hover) #T5 span
+body #assessments:has(#T1:hover) #gT1, body #assessments:has(#gT1:hover) #T1 span,
+body #assessments:has(#T2:hover) #gT2, body #assessments:has(#gT2:hover) #T2 span,
+body #assessments:has(#T3:hover) #gT3, body #assessments:has(#gT3:hover) #T3 span,
+body #assessments:has(#T4:hover) #gT4, body #assessments:has(#gT4:hover) #T4 span,
+body #assessments:has(#T5:hover) #gT5, body #assessments:has(#gT5:hover) #T5 span
 {color: var(--highlight-color); }
 
-body:has(#tcA:hover) #task-comp-A span, body:has(#task-comp-A:hover) #tcA,
-body:has(#tcR:hover) #task-comp-R span, body:has(#task-comp-R:hover) #tcR,
-body:has(#tcG:hover) #task-comp-G span, body:has(#task-comp-G:hover) #tcG
+body #assessments:has(#tcA:hover) #task-comp-A span, body #assessments:has(#task-comp-A:hover) #tcA,
+body #assessments:has(#tcR:hover) #task-comp-R span, body #assessments:has(#task-comp-R:hover) #tcR,
+body #assessments:has(#tcG:hover) #task-comp-G span, body #assessments:has(#task-comp-G:hover) #tcG
 {color: var(--highlight-color); }
+
+#schedule #assessments {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#schedule .assessment {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#schedule .assessment h3 {
+    padding: 1em;
+    background-color: var(--aux-color-1);
+    color: var(--base-color);
+    font-weight: 900;
+    font-variant: small-caps;
+    text-wrap: balance;
+    border-radius: var(--r);
+}
+
+#schedule .assessment ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#schedule .assessment li {
+    --color: var(--highlight-color);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    box-shadow: inset 0 0 0 1px var(--color);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    position: relative;
+    text-wrap: balance;
+}
+
+#schedule .assessment li .date{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: var(--color);
+    padding: var(--r);
+    padding-bottom: 0;
+    border-radius: var(--r) var(--r) 0 0;
+    font-size: 0.75em;
+    font-weight: 900;
+    color: var(--base-color);
+}
+
+#schedule .assessment li p {
+    line-height: 1;
+    position: relative;
+}
+
+#schedule .assessment li p:not(:first-of-type) {
+    margin-top: 0.5em;
+}
+
+#schedule .assessment li p::before {
+    content: '';
+    width: 0.75em;
+    height: 0.75em;
+    border: 2px solid var(--main-color);
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
+#schedule .assessment li.check {
+    --color: var(--main-color);
+    opacity: 0.5;
+}
+
+#schedule .assessment li.check p {
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+#schedule .assessment li.check p::after {
+    position: absolute;
+    top: 0.125em;
+    left: 0.125em;
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--color);
+    border-radius: 1px;
+}
 
 @media screen and (orientation: landscape) {
 
@@ -114,6 +207,40 @@ body:has(#tcG:hover) #task-comp-G span, body:has(#task-comp-G:hover) #tcG
 
     .formula {
         font-size: 1em;
+    }
+
+    #schedule #assessments {
+        display: grid;
+        gap: 1em;
+        grid-auto-columns: 1fr;
+        grid-template-rows: repeat(var(--rows), auto);
+        grid-auto-flow: column;
+        align-items: start;
+    }
+
+    #schedule .assessment {
+        display: grid;
+        grid-row: 1/-1;
+        grid-template-rows: subgrid;
+        grid-template-columns: 1fr;
+    }
+
+    #schedule .assessment h3 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    #schedule .assessment ul {
+        display: grid;
+        grid-row: 2/-1;
+        grid-column: 1/2;
+        grid-template-rows: subgrid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    #schedule .assessment li {
+        grid-column: 1;
     }
 
 }

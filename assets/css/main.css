@@ -19,6 +19,9 @@
 
     --sec-width: 70%;
     --sec-margin: calc(50% - 0.5 * var(--sec-width));
+
+    --r: 5px;
+
 }
 
 *, ::before, ::after {

@@ -107,4 +107,13 @@ if (!empty($GLOBALS['OFERTAS'])) {
     }
 }
 
+function e($v) {
+    return htmlspecialchars($v ?? '', ENT_QUOTES, 'UTF-8');
+}
+
+function format_date_br($isoDate) {
+    $dt = DateTime::createFromFormat('Y-m-d', $isoDate);
+    return $dt ? $dt->format('d/m/Y') : e($isoDate);
+}
+
 ?>

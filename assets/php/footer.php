@@ -1,13 +1,6 @@
 <?php
 
-    include('parse_data.php');
-
-    $prof = oferta('current.professor');
-    $monitors = oferta('current.monitors', []);
-
-    function e($v) {
-        return htmlspecialchars($v ?? '', ENT_QUOTES, 'UTF-8');
-    }
+    include_once('parse_data.php');
 
     function render_professor($prof) {
         echo '<section id="professor-section">';
@@ -75,7 +68,7 @@
 
 <footer>
     <?php render_professor(oferta('current.professor')) ?>
-    <?php render_monitors(oferta('current.monitors')) ?>
+    <?php render_monitors(oferta('current.monitors', [])) ?>
     <section id="institucional">
         <h2 class="hidden">Institucional</h2>
         <img loading="lazy" decoding="async" sizes="(max-width: 480px) 100vw, 480px" srcset="
