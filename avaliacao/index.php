@@ -19,7 +19,7 @@
         <main id="assessments">
             <section>
                 <h1>Avaliação</h1>
-                <p>A avaliação da disciplina é baseada em cinco tarefas investigativas, realizadas em grupo ao longo do semestre. Cada tarefa propõe uma forma diferente de analisar ou produzir materiais didáticos, articulando teoria, prática e reflexão crítica.</p>
+                <p>A avaliação da disciplina é baseada em quatro tarefas investigativas, realizadas em grupo ao longo do semestre. Cada tarefa propõe uma forma diferente de analisar ou produzir materiais didáticos, articulando teoria, prática e reflexão crítica.</p>
             </section>
             <section class="two-cols">
                 <section class="col">
@@ -32,9 +32,8 @@
                                 <div class="numerator">
                                     <span class="task-weight">4</span> <span id="gT1" class="task-grade">T<sub>1</sub></span> <span>+</span>
                                     <span class="task-weight">4</span> <span id="gT2" class="task-grade">T<sub>2</sub></span> <span>+</span>
-                                    <span class="task-weight">4</span> <span id="gT3" class="task-grade">T<sub>3</sub></span> <span>+</span>
-                                    <span class="task-weight">5</span> <span id="gT4" class="task-grade">T<sub>4</sub></span> <span>+</span>
-                                    <span class="task-weight">3</span> <span id="gT5" class="task-grade">T<sub>5</sub></span>
+                                    <span class="task-weight">5</span> <span id="gT3" class="task-grade">T<sub>3</sub></span> <span>+</span>
+                                    <span class="task-weight">3</span> <span id="gT4" class="task-grade">T<sub>4</sub></span>
                                 </div>
                                 <div class="denominator">
                                     <span>20</span>
@@ -81,7 +80,7 @@
                     </section>
                 </section>
                 <section class="col" id="five-tasks">
-                    <h2>As cinco tarefas:</h2>
+                    <h2>As quatro tarefas:</h2>
                     <ol class="comp-list">
                         <li class="component task" id="T1">
                             <h3><span>T<sub>1</sub></span> Análise vertical</h3>
@@ -89,18 +88,14 @@
                         </li>
                         <li class="component task" id="T2">
                             <h3><span>T<sub>2</sub></span> Análise horizontal</h3>
-                            <p>Comparação entre dois livros a partir de critérios comuns, buscando identificar diferenças de abordagem e qualidade.</p>
+                            <p>Comparação entre dois livros, inclusive de outros países, a partir de critérios comuns, buscando identificar diferenças de abordagem e qualidade, considerando seu contexto educacional e, no caso de livros estrangeiros, comparando à realidade brasileira.</p>
                         </li>
                         <li class="component task" id="T3">
-                            <h3><span>T<sub>3</sub></span> Análise de livro estrangeiro</h3>
-                            <p>Investigação de um material didático de outro país, considerando seu contexto educacional e comparando à realidade brasileira.</p>
-                        </li>
-                        <li class="component task" id="T4">
-                            <h3><span>T<sub>4</sub></span> Produção de material didático</h3>
+                            <h3><span>T<sub>3</sub></span> Produção de material didático</h3>
                             <p>Elaboração de um capítulo ou sequência didática autoral (aprox. 30 páginas), aplicando os aprendizados das análises anteriores.</p>
                         </li>
-                        <li class="component task" id="T5">
-                            <h3><span>T<sub>5</sub></span> Revisão por pares</h3>
+                        <li class="component task" id="T4">
+                            <h3><span>T<sub>4</sub></span> Revisão por pares</h3>
                             <p>Avaliação crítica do material produzido por outro grupo, com foco em feedback qualificado e fundamentado.</p>
                         </li>
                     </ol>
