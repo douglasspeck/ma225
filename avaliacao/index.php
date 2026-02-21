@@ -10,9 +10,9 @@
 
         <!-- SEO -->
         <meta name="author" content="Speck">
-        <meta name="description" content="Site Institucional da Disciplina MA225 oferecida pelo IMECC-Unicamp">
+        <meta name="description" content="Informações sobre o Processo Avaliativo da Disciplina MA225 oferecida pelo IMECC-Unicamp">
         <meta name="keywords" content="ma225, livros didáticos, materiais didáticos, matemática, imecc, unicamp">
-        <link rel="canonical" href="https://ime.unicamp.br/~ma225">
+        <link rel="canonical" href="https://ime.unicamp.br/~ma225/avaliacao/">
     </head>
     <body>
         <?php include('../assets/php/header.php'); ?>
