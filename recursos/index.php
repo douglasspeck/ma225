@@ -17,7 +17,16 @@
     <body>
         <?php include('../assets/php/header.php'); ?>
         <main>
-            
+            <section>
+                <h1>Recursos Adicionais</h1>
+                <p>Esta página ainda está em construção. Enquanto isso, acesse os recursos através dos botões abaixo:</p>
+            </section>
+            <section class="gallery center">
+                <a href="https://drive.google.com/open?id=1cl2tLXwdtiQ37mcGa7UQfv7IrSvFS5AIt6qXnObR1-s&usp=drive_copy" class="button">[Planilha] BNCC</a>
+                <a href="https://pdf.detic.unicamp.br/" class="button">Ferramentas de PDF</a>
+                <a href="http://latexcolor.com/" class="button">Cores no LaTeX</a>
+                <a href="https://www.latextemplates.com/" class="button">Modelos para LaTeX</a>
+            </section>
         </main>
         <?php include('../assets/php/footer.php'); ?>
         <script src="../assets/js/detectScroll.js"></script>
