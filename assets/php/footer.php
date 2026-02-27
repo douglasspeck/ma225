@@ -76,13 +76,23 @@
     <section id="institucional">
         <h2 class="hidden">Institucional</h2>
         <img loading="lazy" decoding="async" sizes="(max-width: 480px) 100vw, 480px" srcset="
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_50.png 50w,
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_169.png 169w,
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_250.png 250w,
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_312.png 312w,
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_367.png 367w,
+            /~ma225/assets/img/logoLEM_npbrze_c_scale,w_480.png 480w"
+        src="/~ma225/assets/img/logoLEM_npbrze_c_scale,w_480.png"
+        alt="Logo do Laboratório de Ensino de Matemática">
+        <img loading="lazy" decoding="async" sizes="(max-width: 480px) 100vw, 480px" srcset="
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_50.png 50w,
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_168.png 168w,
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_250.png 250w,
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_318.png 318w,
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_382.png 382w,
             /~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_480.png 480w"
-        src="/~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_480.png" alt="Logo do IMECC">
+        src="/~ma225/assets/img/logoIMECC_zovtlq_c_scale,w_480.png"
+        alt="Logo do IMECC">
         <img loading="lazy" decoding="async" sizes="(max-width: 402px) 100vw, 402px" srcset="
             /~ma225/assets/img/logoUnicamp_dhrsm8_c_scale,w_50.png 50w,
             /~ma225/assets/img/logoUnicamp_dhrsm8_c_scale,w_164.png 164w,
@@ -90,6 +100,7 @@
             /~ma225/assets/img/logoUnicamp_dhrsm8_c_scale,w_402.png 402w"
         src="/~ma225/assets/img/logoUnicamp_dhrsm8_c_scale,w_402.png"
         alt="Logo da Unicamp">
+<!-- incluir lem-->
     </section>
     <p class="creditos">Site desenvolvido com <span class="coracao"></span><span class="hidden">amor</span> por <a href="https://ime.unicamp.br/~speck">Speck</a></p>
 </footer>

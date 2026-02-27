@@ -36,7 +36,7 @@
                                     <span class="task-weight">3</span> <span id="gT4" class="task-grade">T<sub>4</sub></span>
                                 </div>
                                 <div class="denominator">
-                                    <span>20</span>
+                                    <span>16</span>
                                 </div>
                             </div>
                         </div>

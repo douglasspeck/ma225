@@ -25,6 +25,7 @@
             </section>
             <section id="useful_links" class="gallery center">
                 <a href="https://drive.google.com/file/d/1i0HkdVMGVucbJFDqo-p0in56hi-0xV6r/view?usp=drive_link" class="button">Apresentação da Disciplina</a>
+                <a href="https://drive.google.com/open?id=1dL6IVZPR3vT9D9iCIK9CD1dEjbLyKT2hdzjCoMSLL4A&usp=drive_copy" class="button">Grupos de Trabalho</a>
             </section>
         </main>
         <?php include('assets/php/footer.php'); ?>
