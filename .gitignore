@@ -2,3 +2,4 @@ ofertas/*.json
 .env
 arquivo/
 *.pdf
+assets/img/imecc_pessoas/*
