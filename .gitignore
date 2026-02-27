@@ -1,3 +1,4 @@
 ofertas/*.json
 .env
 arquivo/
+*.pdf
