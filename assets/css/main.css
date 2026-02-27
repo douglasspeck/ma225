@@ -22,6 +22,8 @@
 
     --r: 5px;
 
+    --shadow: rgb(0,0,0,0.35);
+
 }
 
 *, ::before, ::after {
@@ -95,7 +97,7 @@ a[href ^="https://"]::after {
     padding-left: 0.5ch;
 }
 
-main a:not(.clean) {
+main a {
     color: var(--red);
     font-weight: bolder;
     background: linear-gradient(var(--red), var(--red));
@@ -105,25 +107,39 @@ main a:not(.clean) {
     background-position: 1ch 100%;
 }
 
-a:not(.clean):hover {
+a:hover {
     background-size: 100% 2px;
     background-position: 0 100%;
 }
 
 a.button {
+    --s: 2px;
     width: fit-content;
     background: none;
     color: var(--base-color);
     background-color: var(--highlight-color);
     padding: 0.25em 0.5em;
-    margin: 0.5em auto 0;
     font-family: var(--aux-font);
     font-weight: bold;
     border-radius: 0.25em;
+    transform: translate(calc(-1 * var(--s)), calc(-1 * var(--s)));
+    box-shadow: var(--s) var(--s) var(--s) 0 var(--shadow);
+}
+
+a.button:hover {
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 0 var(--shadow);
 }
 
 a.button.inactive {
     pointer-events: none;
+}
+
+a.clean {
+    color: inherit;
+    font-weight: inherit;
+    background: none;
+    transition: inherit;
 }
 
 main {
@@ -162,6 +178,16 @@ hr {
     border-bottom: 1px solid var(--aux-color-2);
     width: 70%;
     margin: 0.25em auto;
+}
+
+.gallery {
+    display: flex;
+    gap: 1em;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (orientation: landscape) {

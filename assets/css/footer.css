@@ -51,8 +51,9 @@ footer > section h2 {
 }
 
 .email::before { content: 'E-mail: '; }
-.room::before { content: 'Sala '; }
+.room::before { content: 'Sala: '; }
 .office_hours::before { content: 'Horário de Atendimento: '; }
+.class_schedule::before { content: 'Horário de Aula: '; }
 
 .name {
     display: flex;

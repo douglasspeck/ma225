@@ -97,10 +97,22 @@
                 <h1>Cronograma</h1>
                 <p>A disciplina é fundamentalmente prática, com as aulas voltadas majoritariamente para o desenvolvimento das tarefas avaliativas.</p>
                 <?php render_assessments(oferta('current.assessments', [])) ?>
-                <p>Além dos encontros para elaboração dos projetos, a disciplina contará com momentos de explicação sobre os mesmos, além de exposições teóricas e outros pontos de contato institucionais. Confira o calendário completo abaixo:</p>
-                <section id="calendar">
+                <p>Além dos encontros para elaboração dos projetos, a disciplina contará com momentos de explicação sobre os mesmos, além de exposições teóricas e outros pontos de contato institucionais.</p>
+                <!--section id="calendar">
                     <h2 class="hidden">Calendário</h2>
-                </section>
+                    <section class="month">
+                        <h3>Fevereiro</h3>
+                        <article class="day">
+                            <h3 class="date">27/02/2026</h3>
+                            <div class="content">
+                                <p>Apresentação da Disciplina</p>
+                            </div>
+                        </article>
+                    </section>
+                </section-->
+            </section>
+            <section class="gallery center">
+                <a href="https://docs.google.com/spreadsheets/d/1KdurgPGgJg-AmgexFv18L0hDdt1613ywpk2pC-opW4A/edit?usp=sharing" class="button">Calendário Completo</a>
             </section>
         </main>
         <?php include('../assets/php/footer.php'); ?>

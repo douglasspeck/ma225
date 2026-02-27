@@ -23,6 +23,10 @@
                 . '</p>';
         }
 
+        echo '<p class="class_schedule">'
+                . e(oferta('current.class_schedule'))
+                . '</p>';
+
         echo '</section>';
     }
 

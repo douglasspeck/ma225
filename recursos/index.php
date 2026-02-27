@@ -16,6 +16,9 @@
     </head>
     <body>
         <?php include('../assets/php/header.php'); ?>
+        <main>
+            
+        </main>
         <?php include('../assets/php/footer.php'); ?>
         <script src="../assets/js/detectScroll.js"></script>
     </body>
