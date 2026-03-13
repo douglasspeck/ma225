@@ -24,7 +24,7 @@
                 <p>Além do conteúdo teórico, a disciplina valoriza a produção acadêmica e o trabalho em equipe. Os estudantes elaboram relatórios escritos, apresentações orais e metodologias próprias de análise, exercitando habilidades de argumentação, sistematização e comunicação científica. Dessa forma, MA225 contribui tanto para a formação crítica de futuros professores e pesquisadores quanto para a compreensão do livro didático como objeto central nas práticas de ensino e aprendizagem em Matemática.</p>
             </section>
             <section id="useful_links" class="gallery center">
-                <a href="https://drive.google.com/file/d/1i0HkdVMGVucbJFDqo-p0in56hi-0xV6r/view?usp=drive_link" class="button">Apresentação da Disciplina</a>
+                <a href="https://drive.google.com/drive/folders/1plVSxOqc9XIfBGpBkDN-lNucwVjnNGKv?usp=drive_link" class="button">Apresentação da Disciplina</a>
                 <a href="https://drive.google.com/open?id=1dL6IVZPR3vT9D9iCIK9CD1dEjbLyKT2hdzjCoMSLL4A&usp=drive_copy" class="button">Grupos de Trabalho</a>
             </section>
         </main>
