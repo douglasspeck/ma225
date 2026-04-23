@@ -1,0 +1,111 @@
+#offers, #submission-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+#offers h1 {
+    grid-column: 1/4;
+}
+
+#offers .offer-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+    border: 1px solid var(--aux-color-1);
+    border-radius: var(--r);
+    background-color: var(--base-color);
+    box-shadow: 2px 2px 4px 0 var(--shadow);
+}
+
+#offers .offer-card p {
+    line-height: 1;
+}
+
+#offers .offer-card p span,
+#offer p span {
+    font-weight: bold;
+}
+
+#offers .offer-card a {
+    font-size: 0.75em;
+    max-width: unset;
+}
+
+#offer {
+    gap: 0.5em;
+}
+
+#offer .button {
+    margin-top: 0.25em;
+}
+
+#submissions {
+    gap: 1em;
+}
+
+.submission {
+    font-size: 0.75em;
+    --s: 0.1em;
+    padding: 0.5em;
+    border: 1px solid var(--aux-color-1);
+    border-radius: var(--r);
+    transform: translate(0,0);
+    box-shadow: var(--s) var(--s) var(--s) #10101030;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+}
+
+.submission a {
+    color: var(--main-color);
+}
+
+.submission:hover {
+    transform: translate(var(--s), var(--s));
+    box-shadow: 0 0 0 #10101030;
+}
+
+.submission h3 {
+    margin-bottom: 0.5em;
+}
+
+.submission h3 .assessment {
+    padding: 0.1em 0.3em;
+    background-color: var(--aux-color-1);
+    color: var(--base-color);
+    border-radius: var(--r);
+    font-weight: 900;
+}
+
+.submission .book .title {
+    margin-bottom: 0.25em;
+}
+
+.submission .book p {
+    font-weight: 200;
+}
+
+.submission .book .grade::before {
+    content: 'Turma: ';
+    font-weight: 400;
+}
+
+.submission .book .info::before {
+    content: 'Info: ';
+    font-weight: 400;
+}
+
+.submission .star {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    width: 1em;
+    top: 0.25rem;
+    right: 0.25rem;
+    font-size: 1.25em;
+    color: var(--highlight-color);
+}
