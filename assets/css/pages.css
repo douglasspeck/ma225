@@ -22,6 +22,21 @@ main h2 {
     font-size: 0.75em;
 }
 
+.formula:has(.condition) {
+    position: relative;
+    margin-top: 2em;
+}
+
+.formula .condition {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--aux-color-1);
+    font-weight: bold;
+}
+
 .mult::after {
     content: '⋅';
     padding: 0 0.5ch;

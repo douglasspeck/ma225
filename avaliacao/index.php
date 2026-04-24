@@ -24,19 +24,41 @@
             <section class="two-cols">
                 <section class="col">
                     <section id="final-grade" class="formula">
+                        <div class="condition">Se, para algum trabalho, <span id="tcG" class="formula-task-comp">G</span> &lt 1 :</div>
                         <div class="equation">
                             <div class="left-part">
                                 <span>Média</span>
                             </div>
                             <div class="right-part fraction">
                                 <div class="numerator">
-                                    <span class="task-weight">4</span> <span id="gT1" class="task-grade">T<sub>1</sub></span> <span>+</span>
+                                    <span class="task-weight">4</span> <span id="gT1" class="task-grade">T<sub>1</sub></span> +
                                     <span class="task-weight">4</span> <span id="gT2" class="task-grade">T<sub>2</sub></span> <span>+</span>
                                     <span class="task-weight">5</span> <span id="gT3" class="task-grade">T<sub>3</sub></span> <span>+</span>
                                     <span class="task-weight">3</span> <span id="gT4" class="task-grade">T<sub>4</sub></span>
                                 </div>
                                 <div class="denominator">
                                     <span>16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="final-grade" class="formula">
+                        <div class="condition">Do contrário:</div>
+                        <div class="equation">
+                            <div class="left-part">
+                                <span>Média</span>
+                            </div>
+                            <div class="right-part fraction">
+                                <div class="numerator">
+                                    <span class="task-weight">4</span> max(
+                                        <span id="gT1" class="task-grade">T<sub>1</sub></span>,
+                                        <span id="gT2" class="task-grade">T<sub>2</sub></span>
+                                    ) <span>+</span>
+                                    <span class="task-weight">5</span> <span id="gT3" class="task-grade">T<sub>3</sub></span> <span>+</span>
+                                    <span class="task-weight">3</span> <span id="gT4" class="task-grade">T<sub>4</sub></span>
+                                </div>
+                                <div class="denominator">
+                                    <span>12</span>
                                 </div>
                             </div>
                         </div>
